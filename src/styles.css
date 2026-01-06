@@ -76,8 +76,18 @@ nav {
 }
 
 div#content {
-  background-color: var(--green-bg);
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--green-bg);
+  width: 50vw;
+}
+
+.container {
+  width: 30rem;
+  border: 10px solid black                                                                                                                                                                                                                                           ;
 }
 
 footer {
@@ -88,4 +98,13 @@ footer {
   background-color: var(--green-bg);
 
 
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
 }
