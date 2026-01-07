@@ -86,8 +86,9 @@ div#content {
 }
 
 .container {
-  width: 30rem;
-  border: 10px solid black                                                                                                                                                                                                                                           ;
+  border: 10px solid black;
+  width: 80%; 
+  padding: 30px;                                                                                                                                                                                                                                          ;
 }
 
 footer {
@@ -107,4 +108,8 @@ a:link {
 
 a:visited {
   color: white;
+}
+
+li {
+  list-style-type: none;
 }
