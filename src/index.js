@@ -28,6 +28,27 @@ const descriptionText = `
   Our baker is the best in town! Don't miss the opportunity to eat our 
   delicious morning bowls!
 `;
+const daysOfWeekHours = {
+  "Monday": "closed",
+  "Tuesday": "9:00 - 22:00",
+  "Wednesday": "9:00 - 22:00",
+  "Thursday": "9:00 - 22:00",
+  "Friday": "9:00 - 22:00",
+  "Saturday": "10:00 - 23:00",
+  "Sunday": "10:00 - 21:00",
+}
+
+const days = Object.keys(daysOfWeekHours);
+const hours = Object.values(daysOfWeekHours)
+const hoursList = document.createElement("li");
+for (let i = 0; i < days.length; i++) {
+  const ol = document.createElement("ol");
+  ol.textContent = `${days[i]}  ${hours[i]}`;
+  hoursList.appendChild(ol);
+}
+
+openHours.appendChild(hoursList);
+
 restaurantName.textContent = "Carmelle's kitchen";
 
 sameClassElement([description, openHours], "container");
