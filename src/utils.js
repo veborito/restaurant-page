@@ -10,8 +10,15 @@ function createParagraph(container, text) {
   container.appendChild(paragraph);
 }
 
+
 function addContent(content, element) {
   content.appendChild(element);
 }
 
-export { sameClassElement, createParagraph, addContent }
+function addMultipleContent(content, elements) {
+  for (let item of elements) {
+    addContent(content, item);
+  }
+}
+
+export { sameClassElement, createParagraph, addContent, addMultipleContent }

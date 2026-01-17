@@ -29,7 +29,7 @@ body {
   align-items: center;
   gap: 20px;
 
-  background-image: url("./food.jpg");
+  background-image: url("../assets/food.jpg");
   background-size: cover;
   height: 100vh;
   width: 100vw;
