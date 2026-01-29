@@ -1,7 +1,26 @@
 import "./styles.css";
 import "./utils.js";
-import proteinBowlImage from "../assets/protein-bowl.jpg"
+import proteinBowlImage from "../assets/protein-bowl.jpg";
+import cookiesImage from "../assets/cookies.jpg";
 import { addContent, addMultipleContent, createParagraph } from "./utils.js";
+
+
+const dishesInfo = [
+  [
+    proteinBowlImage, 
+    "protein bowl",
+    "Extase in front of the most beautiful and colorfull protein bowl in town.",
+    "20 CHF",
+  ],
+  
+  [
+    cookiesImage,
+    "cookies",
+    "Beautiful home baked cookies, with chocolate chips and a new addiction.",
+    "6 CHF per cookie",
+  ],
+
+]
 
 function createMenuItem(imagePath, imageDescription,text, price) {
   const container = document.createElement("div");
@@ -16,8 +35,8 @@ function createMenuItem(imagePath, imageDescription,text, price) {
 
   createParagraph(imageAndDesc, text);
   addContent(imageAndDesc, image);
+  createParagraph(imageAndDesc, price);
   addContent(container, imageAndDesc);
-  createParagraph(container, price);
 
   return container;
 }
@@ -27,9 +46,10 @@ const menu = () => {
   const addedContent = document.createElement("div");
   const menuTitle = document.createElement("h1");
 
-  const item = createMenuItem(proteinBowlImage, "protein bowl","Extase in front of the most beautiful and colorfull protein bowl in town", "20 CHF");
-
-  addContent(addedContent, item);
+  for (let dish of dishesInfo) {
+    const item = createMenuItem(dish[0], dish[1], dish[2], dish[3]);
+    addContent(addedContent, item);
+  }
   addContent(content, addedContent);
 }
 
