@@ -2,7 +2,7 @@ import "./styles.css";
 import "./utils.js";
 import proteinBowlImage from "../assets/protein-bowl.jpg";
 import cookiesImage from "../assets/cookies.jpg";
-import { addContent, addMultipleContent, createParagraph } from "./utils.js";
+import { addContent, createParagraph } from "./utils.js";
 
 
 const dishesInfo = [
